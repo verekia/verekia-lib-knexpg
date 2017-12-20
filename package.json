@@ -1,0 +1,50 @@
+{
+  "name": "@verekia/lib-knexpg",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Jonathan Verrecchia <hello@verekia.com> (http://verekia.com)",
+  "repository": "verekia/verekia-lib-knexpg",
+  "scripts": {
+    "start": "babel-node src/consumer.js",
+    "clean": "rimraf lib",
+    "build": "yon run lint-test && yon run clean && babel src -d lib --ignore .test.js --ignore consumer.js",
+    "lint": "eslint src",
+    "test": "jest --coverage -i",
+    "lint-test": "yon run lint && yon run test",
+    "precommit": "yon run lint-test",
+    "prepare": "yon run lint-test && yon run build",
+    "postpublish": "yon run clean"
+  },
+  "dependencies": {
+    "@verekia/lib-lang": "^1.0.1",
+    "dotenv": "^4.0.0",
+    "knex": "^0.14.2",
+    "lodash.keyby": "^4.6.0",
+    "pg": "^7.4.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.3",
+    "babel-jest": "^21.2.0",
+    "babel-plugin-transform-es2015-spread": "^6.22.0",
+    "babel-plugin-transform-flow-comments": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.12.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-flowtype-errors": "^3.3.6",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-security": "^1.4.0",
+    "flow-bin": "^0.61.0",
+    "husky": "^0.14.3",
+    "jest": "^21.2.1",
+    "prettier": "^1.9.1",
+    "rimraf": "^2.6.2",
+    "yarn-or-npm": "^2.0.4"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "extends": [
+    "airbnb-base",
+    "plugin:flowtype/recommended",
+    "prettier",
+    "prettier/flowtype",
+    "plugin:node/recommended",
+    "plugin:security/recommended"
+  ],
+  "plugins": [
+    "prettier",
+    "flowtype",
+    "flowtype-errors",
+    "node",
+    "security"
+  ],
+  "env": {
+    "jest": true
+  },
+  "rules": {
+    "no-unexpected-multiline": 2,
+    "flowtype-errors/show-errors": 2,
+    "import/prefer-default-export": 0,
+    "prettier/prettier": 2,
+    "node/no-unsupported-features": 0
+  }
+}

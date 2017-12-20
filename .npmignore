@@ -1,0 +1,11 @@
+src
+coverage
+.babelrc
+.eslintrc.json
+consumer.js
+*.test.js
+.env
+.env-sample
+.flowconfig
+.prettierrc
+yarn.lock
