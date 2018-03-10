@@ -1,6 +1,6 @@
 // @flow
 
-import { cond } from '@verekia/lib-lang'
+import { cond, throwErr } from '@verekia/lib-lang'
 
 module.exports = async (
   queryBuilder: Object,
@@ -32,8 +32,6 @@ module.exports = async (
         },
       ],
     ],
-    () => {
-      throw Error('More than one row found for knexPgUpsertOne')
-    },
+    () => throwErr('More than one row found for knexPgUpsertOne'),
   )
 }

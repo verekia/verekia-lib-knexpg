@@ -16,11 +16,10 @@
     "postpublish": "yon run clean"
   },
   "dependencies": {
-    "@verekia/lib-lang": "^1.0.1",
-    "dotenv": "^4.0.0",
-    "knex": "^0.14.2",
-    "lodash.keyby": "^4.6.0",
-    "pg": "^7.4.0"
+    "@verekia/lib-lang": "^2.0.0",
+    "dotenv": "^5.0.1",
+    "knex": "^0.14.4",
+    "pg": "^7.4.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
